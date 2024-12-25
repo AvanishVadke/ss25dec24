@@ -8,11 +8,12 @@ app.use(cors());
 app.use(express.json());
 
 const con = mysql.createConnection({
-    host : "sql12.freesqldatabase.com   ",
-    user : "sql12754019",
-    password : "nMIUkfg9X9@100",
-    database : "sql12754019"
+    host: "sql12.freesqldatabase.com", // Corrected: no trailing spaces
+    user: "sql12754019",
+    password: "nMIUkfg9X9",
+    database: "sql12754019"
 });
+
 
 app.post("/save" , (req, res) => {
     let sql = "insert into student values(?, ?, ?)";
